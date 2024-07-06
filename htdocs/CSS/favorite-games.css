@@ -142,6 +142,7 @@ h1 {
     background-color: black;
 }
 
+/* FADING ANIM */
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
@@ -155,6 +156,7 @@ h1 {
     font-family: "Vergilia", "Garamond", serif;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY CONTAINER */
 .comments-overlay-background {
     position: fixed;
     display: none;
@@ -169,6 +171,7 @@ h1 {
     cursor: pointer;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON */
 #backButton {
     margin-left: 24%;
     margin-top: 6%;
@@ -176,10 +179,12 @@ h1 {
     color: white;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON HOVER */
 #backButton:hover {
     background-color: #1e1e1e;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY BACKGROUND */
 .comments-overlay-content {
     position: fixed;
     width: 100%;
@@ -194,6 +199,7 @@ h1 {
     cursor: pointer;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY TEXT */
 .text-forms {
     font-family: "Quicksand", "Garamond", serif;
     font-size: 100px;
@@ -205,6 +211,7 @@ h1 {
     margin-left: 2%;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY FORM */
 #commentName {
     resize: none;
     border: 1px solid;
@@ -216,6 +223,7 @@ h1 {
     height: 40px;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY CONFIRM BUTTON */
 #confirmButton {
     resize: none;
     background-color: #393939;
@@ -226,6 +234,7 @@ h1 {
     height: 100px;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY CONFIRM BUTTON HOVER */
 #confirmButton:hover {
     background-color: #1e1e1e;
 }
@@ -237,6 +246,7 @@ form {
     font-family: "Quicksand", "Garamond", serif;
 }
 
+/* COMMENT TEXT BOX */
 #commentText {
     resize: none;
     border: 1px solid;
@@ -249,6 +259,7 @@ form {
     height: 80px;
 }
 
+/* COMMENT SUBMISSION BUTTON */
 #commentButton {
     margin-left: 22%;
     resize: none;
@@ -258,10 +269,12 @@ form {
     font-size: large;
 }
 
+/* COMMENT SUBMISSION BUTTON HOVER */
 #commentButton:hover {
     background-color: #1e1e1e;
 }
 
+/* COMMENTS THAT HAVE BEEN WRITTEN CONTAINER */
 .allComments {
     text-align: left;
     padding-left: 100px;
@@ -271,11 +284,13 @@ form {
     font-size: large;
 }
 
+/* COMMENTS THAT HAVE BEEN WRITTEN NAMES */
 #commentUID {
     font-size: x-large;
     color: rgb(195, 180, 255);
 }
 
+/* COMMENTS THAT HAVE BEEN WRITTEN DATE */
 #commentDate {
     font-size: 15px;
     color: rgb(235, 230, 253);

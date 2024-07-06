@@ -1,7 +1,9 @@
 <?php
 
+/* INSERTS COMMENT INTO SQL DATABASE */
 function setComments() {
     if (isset($_POST['confirmComment'])) {
+        /* SET COMMENT VARIABLES */
         if ($_POST['uid'] == '') {
             $uid = 'Anonymous';
         } else {
@@ -10,28 +12,36 @@ function setComments() {
         $date = $_POST['date'];
         $message = $_POST['message'];
 
+        /* SET SQL CODE (SETS COMMENT VARIABLES INTO TABLE) INTO STRING */
         $sql = "INSERT INTO shrimplegamescomments (uid, date, message) 
         VALUES ('$uid', '$date', '$message')";
 
+        /* MAKE DATABASE CONNECTION */
         $conn = mysqli_connect('localhost', 'root', '', 'SHRIMPLE-GAMES-COMMENTS');
         if (!$conn) {
             die("Connection failed: ".mysqli_connect_error());
         }
 
+        /* QUERY THE SQL CODE INTO DATABASE */
         $result = $conn->query($sql);
     }
 }
 
+/* GETS AND DISPLAYS COMMENTS */
 function getComments() {
+    /* SET SQL CODE (GETS COMMENT VARIABLES FROM TABLE) INTO STRING */
     $sql = "SELECT * FROM shrimplegamescomments";
 
+    /* MAKE DATABASE CONNECTION */
     $conn = mysqli_connect('localhost', 'root', '', 'SHRIMPLE-GAMES-COMMENTS');
     if (!$conn) {
         die("Connection failed: ".mysqli_connect_error());
     }
 
+    /* QUERY THE SQL CODE INTO DATABASE */
     $result = $conn->query($sql);
 
+    /* FOR EACH COMMENT, ECHO HTML TO FORMAT COMMENT DISPLAY */
     while ($row = $result->fetch_assoc()) {
         echo "<div class='allComments'>";
         echo "<div id='commentUID'>".$row['uid']."</div>";

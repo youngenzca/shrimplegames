@@ -16,9 +16,11 @@ autoSlides();
 // SEE IF THERE ARE NO COMMENTS
 commentsCheck();
 
+// DISPLAY MESSAGE OF THE DAY, DEPENDING ON WHAT DAY IT IS
 function MessageOfTheDay() {
     let day = document.getElementById('motdDate').getAttribute('name');
 
+    // MAKE SURE TO LOOP THROUGH THE 10 ONCE THE DATE GOES OVER 10
     if ((day > 10) && (day < 21)) {
         day -= 10;
     } else if ((day > 10) && (day < 31)) {
@@ -27,7 +29,7 @@ function MessageOfTheDay() {
         day -= 30;
     }
 
-
+    // ALL MOTD MESSAGES
     if (day == 1) {
         document.getElementById("motdQuote").innerHTML 
         = "If you keep carrying old bricks, you will build the same house!";
@@ -165,7 +167,9 @@ function goToPage(n) {
 function linkDropDown() {
     // GO TO A LINK BASED ON WHAT WAS CLICKED ON THE DROPDOWN MENU
     const selectedValue = dropdown.value;
-    if (selectedValue == "Instagram") {
+    if (selectedValue == "E-Mail") {
+        window.location.href = "mailto:allen77t@gmail.com";
+    } else if (selectedValue == "Instagram") {
         window.location.href = "https://www.instagram.com/tristan0418?igsh=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr";
     } else if (selectedValue == "Discord") {
         window.location.href = "https://discordapp.com/users/393365618285477898";
@@ -179,23 +183,23 @@ dropdown.addEventListener('change', function() {
     linkDropDown();
 });
 
-//DISPLAYS NAME SUBMISSION OVERLAY WHEN COMMENT BUTTON IS CLICKED
+// DISPLAYS NAME SUBMISSION OVERLAY WHEN COMMENT BUTTON IS CLICKED
 function displayOverlay(type, bool) {
-    //DETERMINES WHETHER TO OPEN OR CLOSE THE OVERLAY VIA PARAMETER
+    // DETERMINES WHETHER TO OPEN OR CLOSE THE OVERLAY VIA PARAMETER
     if (bool == true) {
-        //GETS SPECIFIC IMAGE AND TEXT CONTENT BY ACCESSING ALL DIV CHILDREN
+        // GETS SPECIFIC IMAGE AND TEXT CONTENT BY ACCESSING ALL DIV CHILDREN
         let content = document.getElementsByClassName(type);
 
-        //DISPLAYS SPECIFIC BACKGROUND, IMAGE AND TEXT
+        // DISPLAYS SPECIFIC BACKGROUND, IMAGE AND TEXT
         for (i = 0; i < content.length; i++) {
             content[i].style.display = "block";
         }
     } else {
-        //TAKES ALL BACKGROUNDS AND CONTENT OVERLAYS
+        // TAKES ALL BACKGROUNDS AND CONTENT OVERLAYS
         let backgrounds = document.getElementsByClassName("overlay-background");
         let overlays = document.getElementsByClassName(type);
 
-        //REMOVES ALL DISPLAYS
+        // REMOVES ALL DISPLAYS
         for (i = 0; i < overlays.length; i++) {
             backgrounds[i].style.display = "none";
             overlays[i].style.display = "none";
@@ -203,6 +207,7 @@ function displayOverlay(type, bool) {
     }
 }
 
+// CHECKS IF THERES COMMENTS, IF NOT THROW "NO COMMENTS"
 function commentsCheck() {
     if (document.getElementsByClassName("allComments").length == 0) {
         document.getElementById("commentsCheck").innerHTML = "<h2 class='sections'>No Comments</h2>";

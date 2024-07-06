@@ -1,4 +1,5 @@
 <?php
+    /* LINK TO PHP SCRIPT AND PHP VARIABLES */
     date_default_timezone_set('America/Los_Angeles');
     include 'DATABASE\HOME-COMMENTS\homecomments.inc.php';
 
@@ -147,13 +148,14 @@
     <!-- COMMENTS HANDLER -->
 <?php
     echo "<form method='POST' action='".setComments()."'>
-        <!-- NAME SUBMISSION OVERLAY -->
+        <!-- /////////NAME SUBMISSION OVERLAY///////// -->
         <div class='overlay-background'>
         <button id='backButton' onclick='displayOverlay('overlay-background', false)'>&#10094;</button>
-            <!-- OVERLAY BACKGROUND -->
+            <!-- /////////OVERLAY BACKGROUND///////// -->
             <div class='overlay-content'>
                 <img src='IMAGES\commentoverlay.png' width='800' height='533'>
 
+                <!-- /////////OVERLAY TEXT/FORM///////// -->
                 <div class='text-forms'>
                     Who's Writing?<br>
                     <textarea id='commentName' name='uid' placeholder='Leave blank for Anonymous' value=''></textarea><br>
@@ -162,6 +164,7 @@
             </div>
         </div>
 
+        <!-- /////////COMMENT TEXT BOX///////// -->
         <textarea id='commentText' name='message' placeholder='Type comment here...'></textarea><br>
         <input type='hidden' name='date' value='$date'>"
 ?>
@@ -170,8 +173,11 @@
     </form>
 
 <?php
+    /* DISPLAYS COMMENTS BELOW COMMENT TEXT BOX */
     getComments();
 ?>
+
+    <!-- CONTAINER TO DISPLAY "NO COMMENTS" -->
     <div id=commentsCheck>
     </div>
 

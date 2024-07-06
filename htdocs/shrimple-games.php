@@ -1,4 +1,5 @@
 <?php
+    /* LINK TO PHP SCRIPT AND PHP VARIABLES */
     date_default_timezone_set('America/Los_Angeles');
     include 'DATABASE\SHRIMPLE-GAMES-COMMENTS\shrimplegamescomments.inc.php';
 
@@ -46,7 +47,7 @@
         <a href="#">Tiktok</a>
         <a href="https://play.google.com/store/apps/dev?id=5399159223820683594">Google Play</a>
         <a href="https://apps.apple.com/us/app/depth-jumper/id6467833484">App Store</a>
-        <a href="#">Email:</a>
+        <a href="mailto:shrimple.games.help@gmail.com">Email:</a>
         <div class="Email">shrimple.games.help@gmail.com</div><hr>
         <div class="SideBarHeaders"><a href="#FallenInc" onclick="closeNav()">Fallen Inc Links</a></div>
         <a href="https://www.youtube.com/channel/UChKkXFVxsyGfm6QFtdV7hsQ">Youtube</a>
@@ -107,6 +108,7 @@
     on Spotify and Apple Music!
     </p>
 
+    <!-- SPOTIFY DISPLAY SECTION -->
     <div id="SpotifyEmbed">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6tyuZH26ZQRSJe7321TCbT?utm_source=generator" 
         width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
@@ -130,13 +132,14 @@
     <!-- COMMENTS HANDLER -->
 <?php
     echo "<form method='POST' action='".setComments()."'>
-        <!-- NAME SUBMISSION OVERLAY -->
+        <!-- /////////NAME SUBMISSION OVERLAY///////// -->
         <div class='overlay-background'>
         <button id='backButton' onclick='displayOverlay('overlay-background', false)'>&#10094;</button>
-            <!-- OVERLAY BACKGROUND -->
+            <!-- /////////OVERLAY BACKGROUND///////// -->
             <div class='overlay-content'>
                 <img src='IMAGES\commentoverlay.png' width='800' height='533'>
 
+                <!-- /////////OVERLAY TEXT/FORM///////// -->
                 <div class='text-forms'>
                     Who's Writing?<br>
                     <textarea id='commentName' name='uid' placeholder='Leave blank for Anonymous' value=''></textarea><br>
@@ -145,6 +148,7 @@
             </div>
         </div>
 
+        <!-- /////////COMMENT TEXT BOX///////// -->
         <textarea id='commentText' name='message' placeholder='Type comment here...'></textarea><br>
         <input type='hidden' name='date' value='$date'>"
 ?>
@@ -153,8 +157,11 @@
     </form>
 
 <?php
+    /* DISPLAYS COMMENTS BELOW COMMENT TEXT BOX */
     getComments();
 ?>
+
+    <!-- CONTAINER TO DISPLAY "NO COMMENTS" -->
     <div id=commentsCheck>
     </div>
 
