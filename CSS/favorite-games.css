@@ -1,0 +1,308 @@
+/* BACKGROUND IMAGE OF WEBSITE */
+body {
+    background-image: url("home-background-image.png");
+}
+
+/* NAV BAR CONTAINER */
+.TOCContainer {
+    border: 1px solid;
+    width: 100%;
+    height: 50px;
+    font-family: "Quicksand", "Garamond", serif;
+}
+
+/* EACH OPTION IN THE NAV BAR TABLE */
+.TOC {
+    border: 1px solid;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+    text-align: center;
+    color: white;
+}
+
+/* MAKING SURE THE BUTTONS DONT THROW OFF THE FLOW */
+.navBar {
+    background-color: #393939;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+    width: 100%;
+    height: 100%;
+}
+
+/* CHANGE BUTTON COLOR WHEN MOUSE IS OVER */
+.navBar:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* HEADER CAPTIONS */
+h1 {
+    text-align: center;
+    color: white;
+    font-family: "Vergilia", "Garamond", serif;
+}
+
+/* MAIN TABLE CONTAINER */
+.FavGames {
+    width: 100%;
+    height: 500px;
+    font-family: "Quicksand", "Garamond", serif;
+}
+
+/* RECENTLY PLAYED LAST UPDATED */
+#RecentlyUpdated {
+    height: 50px;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+    text-align: center;
+    color: white;
+}
+
+/* MAIN TABLE HEADERS */
+.FavGamesHeaders {
+    height: 50px;
+    border: 3px inset;
+    border-radius: 50px;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+}
+
+/* MAIN TABLE CONTENT */
+.FavGamesFill {
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: larger;
+    text-align: center;
+    color: white;
+}
+
+/* OVERLAY BUTTONS */
+.dropbtn {
+    background-color: #393939;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: larger;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* OVERLAY BUTTONS WHEN HOVERED OVER */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #343434;
+}
+
+/* OVERLAY CONTAINER */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* OVERLAY BACKGROUND (HIDDEN) */
+.overlay-background {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    cursor: pointer;
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+/* OVERLAY CONTENT (HIDDEN) */
+.overlay-content {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    margin-top: -250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* CONTENT DROPDOWN TEXT */
+.desc {
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+/* FADING ANIM */
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* COMMENTS HEADER */
+.sections {
+    text-align: left;
+    padding-left: 100px;
+    color: rgb(195, 180, 255);
+    font-family: "Vergilia", "Garamond", serif;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY CONTAINER */
+.comments-overlay-background {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON */
+#backButton {
+    margin-left: 24%;
+    margin-top: 6%;
+    background-color: #393939;
+    color: white;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON HOVER */
+#backButton:hover {
+    background-color: #1e1e1e;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY BACKGROUND */
+.comments-overlay-content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    margin-top: -251px;
+    left: 50%;
+    margin-left: -400px;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY TEXT */
+.text-forms {
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    width: 50%;
+    margin-top: -500px;
+    z-index: 2;
+    margin-left: 2%;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY FORM */
+#commentName {
+    resize: none;
+    border: 1px solid;
+    background-color: #ffffff;
+    color: black;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+    width: 600px;
+    height: 40px;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY CONFIRM BUTTON */
+#confirmButton {
+    resize: none;
+    background-color: #393939;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: xx-large;
+    width: 200px;
+    height: 100px;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY CONFIRM BUTTON HOVER */
+#confirmButton:hover {
+    background-color: #1e1e1e;
+}
+
+/* COMMENTS INPUT BOX */
+form {
+    text-align: left;
+    padding-left: 100px;
+    font-family: "Quicksand", "Garamond", serif;
+}
+
+/* COMMENT TEXT BOX */
+#commentText {
+    resize: none;
+    border: 1px solid;
+    border-color: rgb(195, 180, 255);
+    background-color: #393939;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+    width: 400px;
+    height: 80px;
+}
+
+/* COMMENT SUBMISSION BUTTON */
+#commentButton {
+    margin-left: 22%;
+    resize: none;
+    background-color: #393939;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+}
+
+/* COMMENT SUBMISSION BUTTON HOVER */
+#commentButton:hover {
+    background-color: #1e1e1e;
+}
+
+/* COMMENTS THAT HAVE BEEN WRITTEN CONTAINER */
+.allComments {
+    text-align: left;
+    padding-left: 100px;
+    width: 40%;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+}
+
+/* COMMENTS THAT HAVE BEEN WRITTEN NAMES */
+#commentUID {
+    font-size: x-large;
+    color: rgb(195, 180, 255);
+}
+
+/* COMMENTS THAT HAVE BEEN WRITTEN DATE */
+#commentDate {
+    font-size: 15px;
+    color: rgb(235, 230, 253);
+}
+
+/* IMPORTED FONTS */
+@font-face {
+    font-family: Quicksand;
+    src: url("Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: Vergilia;
+    src: url("Vergilia.ttf");
+}
