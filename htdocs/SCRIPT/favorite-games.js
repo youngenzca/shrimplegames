@@ -7,13 +7,13 @@ commentsCheck();
 function goToPage(n) {
     // SWITCH TO DIFFERENT WEBPAGE BASED ON WHAT BUTTON WAS CLICKED ON NAV BAR
     if (n == 1) {
-        window.location.href = "home.php";
+        window.location.href = "index.html";
     } else if (n == 2) {
-        window.location.href = "favorite-games.php";
+        window.location.href = "favorite-games.html";
     } else if (n == 3) {
-        window.location.href = "shrimple-games.php";
+        window.location.href = "shrimple-games.html";
     } else if (n == 5) {
-        window.location.href = "favorite-games.php#comments";
+        window.location.href = "favorite-games.html#comments";
     }
 }
 
@@ -75,6 +75,6 @@ function displayOverlay(type, on, comments) {
 // CHECKS IF THERES COMMENTS, IF NOT THROW "NO COMMENTS"
 function commentsCheck() {
     if (document.getElementsByClassName("allComments").length == 0) {
-        document.getElementById("commentsCheck").innerHTML = "<h2 class='sections'>No Comments</h2>";
+        document.getElementById("commentsCheck").innerHTML = "<h2 class='sections'>Error! Github does not support PHP!</h2>";
     }
 }
