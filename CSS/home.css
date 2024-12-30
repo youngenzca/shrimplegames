@@ -5,15 +5,15 @@ body {
 
 /* NAV BAR CONTAINER */
 table {
-    border: 1px solid;
+    border: 0.0625rem solid;
     width: 100%;
-    height: 3.125rem;
+    height: 10vh;
     font-family: "Quicksand", "Garamond", serif;
 }
 
 /* EACH OPTION IN THE NAV BAR TABLE */
 th {
-    border: 1px solid;
+    border: 0.0625rem solid;
     font-family: "Quicksand", "Garamond", serif;
     font-size: large;
     text-align: center;
@@ -25,7 +25,7 @@ th {
     background-color: #393939;
     color: white;
     font-family: "Quicksand", "Garamond", serif;
-    font-size: large;
+    font-size: clamp(10px, 2vw, 35px);
     width: 100%;
     height: 100%;
 }
@@ -40,6 +40,7 @@ h1 {
     text-align: center;
     color: white;
     font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(32px, 5vh, 72px);
 }
 
 /* SLIDESHOW CONTAINER */
@@ -152,8 +153,9 @@ h1 {
 /* ABOUT ME AND COMMENTS HEADERS */
 .sections {
     text-align: left;
-    padding-left: 100px;
+    padding-left: 6.25rem;
     font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(32px, 3vh, 64px);
     color: rgb(195, 180, 255);
 }
 
@@ -162,6 +164,7 @@ h1 {
     text-align: center;
     color: white;
     font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(28px, 2.5vh, 56px);
 }
 
 /* MESSAGE OF THE DAY */
@@ -170,22 +173,24 @@ h1 {
     color: white;
     font-size: medium;
     font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(24px, 1.5vh, 48px);
 }
 
 /* ABOUT ME TEXT AND COMMENTS */
 p {
     text-align: left;
     padding-left: 6.25rem;
-    width: 40%;
+    width: 50%;
     color: rgb(235, 230, 253);
     font-family: "Quicksand", "Garamond", serif;
+    font-size: clamp(24px, 1.5vh, 48px);
 }
 
 /* MAKE SURE ABOUT ME PICTURE IS ON THE RIGHT */
 #aboutPicture {
     position: absolute;
-    width: 40%;
-    right: 0.5rem;
+    max-width: 50vw;
+    margin-left: 65%;
 }
 
 /* COMMENT NAME SUBMISSION OVERLAY CONTAINER */
@@ -203,19 +208,6 @@ p {
     cursor: pointer;
 }
 
-/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON */
-#backButton {
-    margin-left: 24%;
-    margin-top: 6%;
-    background-color: #393939;
-    color: white;
-}
-
-/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON HOVER */
-#backButton:hover {
-    background-color: #1e1e1e;
-}
-
 /* COMMENT NAME SUBMISSION OVERLAY BACKGROUND */
 .overlay-content {
     position: fixed;
@@ -231,22 +223,34 @@ p {
     cursor: pointer;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON */
+#backButton {
+    position: absolute;
+    background-color: #393939;
+    color: white;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON HOVER */
+#backButton:hover {
+    background-color: #1e1e1e;
+}
+
 /* COMMENT NAME SUBMISSION OVERLAY TEXT */
 .text-forms {
+    position: absolute;
     font-family: "Quicksand", "Garamond", serif;
     font-size: 6.25rem;
     text-align: center;
     color: white;
-    width: 50%;
     margin-top: -31.25rem;
+    margin-left: 3.75rem;
     z-index: 2;
-    margin-left: 2%;
 }
 
 /* COMMENT NAME SUBMISSION OVERLAY FORM */
 #commentName {
     resize: none;
-    border: 0.0625rem solid;
+    border: 0.0625 solid;
     background-color: #ffffff;
     color: black;
     font-family: "Quicksand", "Garamond", serif;
@@ -281,19 +285,19 @@ form {
 /* COMMENT TEXT BOX */
 #commentText {
     resize: none;
-    border: 1px solid;
+    border: 0.0625rem solid;
     border-color: rgb(195, 180, 255);
     background-color: #393939;
     color: white;
     font-family: "Quicksand", "Garamond", serif;
-    font-size: large;
+    font-size: clamp(24px, 1.5vh, 48px);
     width: 25rem;
     height: 5rem;
 }
 
 /* COMMENT SUBMISSION BUTTON */
 #commentButton {
-    margin-left: 22%;
+    margin-left: 19.25rem;
     resize: none;
     background-color: #393939;
     color: white;
@@ -313,18 +317,18 @@ form {
     width: 40%;
     color: white;
     font-family: "Quicksand", "Garamond", serif;
-    font-size: large;
+    font-size: clamp(24px, 1.5vh, 48px);
 }
 
 /* COMMENTS THAT HAVE BEEN WRITTEN NAMES */
 #commentUID {
-    font-size: x-large;
+    font-size: clamp(24px, 1.5vh, 48px);
     color: rgb(195, 180, 255);
 }
 
 /* COMMENTS THAT HAVE BEEN WRITTEN DATE */
 #commentDate {
-    font-size: 0.9375rem;
+    font-size: 1.125rem;
     color: rgb(235, 230, 253);
 }
 
