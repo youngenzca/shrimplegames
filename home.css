@@ -1,0 +1,344 @@
+/* BACKGROUND IMAGE OF WEBSITE */
+body {
+    background-image: url("home-background-image.png");
+}
+
+/* NAV BAR CONTAINER */
+table {
+    border: 0.0625rem solid;
+    width: 100%;
+    height: 10vh;
+    font-family: "Quicksand", "Garamond", serif;
+}
+
+/* EACH OPTION IN THE NAV BAR TABLE */
+th {
+    border: 0.0625rem solid;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+    text-align: center;
+    color: white;
+}
+
+/* MAKING SURE THE BUTTONS DONT THROW OFF THE FLOW */
+.topBar {
+    background-color: #393939;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: clamp(10px, 2vw, 35px);
+    width: 100%;
+    height: 100%;
+}
+
+/* CHANGE BUTTON COLOR WHEN MOUSE IS OVER */
+.topBar:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* HEADER CAPTIONS */
+h1 {
+    text-align: center;
+    color: white;
+    font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(32px, 5vh, 72px);
+}
+
+/* SLIDESHOW CONTAINER */
+.slideshow-container {
+    max-width: 62.5rem;
+    position: relative;
+    margin: auto;
+}
+  
+/* HIDE IMAGES BY DEFAULT */
+.mySlides {
+    display: none;
+}
+  
+/* NEXT/PREV BUTTONS */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -1.375rem;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem;
+    transition: 0.6s ease;
+    border-radius: 0 0.1875rem 0.1875rem 0;
+    user-select: none;
+}
+  
+/* MAKE SURE NEXT BUTTON IS ON THE RIGHT */
+.next {
+    right: 0;
+    border-radius: 0.1875rem 0 0 0.1875rem;
+}
+  
+/* MAKE THE NEXT/PREV BUTTONS HAVE A DISPLAY WHEN HOVERED */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.caption {
+    background-color: rgba(0,0,0,0.8);
+    color: #f2f2f2;
+    text-shadow: 0.625rem 0.625rem 0.625rem #424242;
+    font-size: 3.125rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 50%;
+    text-align: center;
+    font-family: "Quicksand", "Garamond", serif;
+}
+
+/* NUMBER OF SLIDE TEXTS */
+.numbertext {
+    background-color: rgba(0,0,0,0.8);
+    color: #f2f2f2;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    position: absolute;
+    top: 0;
+}
+
+/* SLIDESHOW CAPTION TEXTS */
+.text {
+    background-color: rgba(0,0,0,0.8);
+    color: #f2f2f2;
+    text-shadow: 0.625rem 0.625rem 0.625rem #424242;
+    font-size: 1.25rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 50%;
+    text-align: center;
+    font-family: "Quicksand", "Garamond", serif;
+}
+  
+/* SLIDESHOW DOTS */
+.dot {
+    cursor: pointer;
+    height: 0.9375rem;
+    width: 0.9375rem;
+    margin: 0 0.125rem;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* CHANGE SLIDESHOW DOTS COLOR WHEN HOVERED */
+.active, .dot:hover {
+    background-color: #bbb;
+}
+  
+/* FADING ANIM REFERENCE */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* FADING ANIM */
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* ABOUT ME AND COMMENTS HEADERS */
+.sections {
+    text-align: left;
+    padding-left: 6.25rem;
+    font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(32px, 3vh, 64px);
+    color: rgb(195, 180, 255);
+}
+
+/* MESSAGE OF THE DAY HEADER */
+.motd {
+    text-align: center;
+    color: white;
+    font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(28px, 2.5vh, 56px);
+}
+
+/* MESSAGE OF THE DAY */
+#motdQuote {
+    text-align: center;
+    color: white;
+    font-size: medium;
+    font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(24px, 1.5vh, 48px);
+}
+
+/* ABOUT ME TEXT AND COMMENTS */
+p {
+    text-align: left;
+    padding-left: 6.25rem;
+    width: 50%;
+    color: rgb(235, 230, 253);
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: clamp(24px, 1.5vh, 48px);
+}
+
+/* MAKE SURE ABOUT ME PICTURE IS ON THE RIGHT */
+#aboutPicture {
+    position: absolute;
+    max-width: 50vw;
+    margin-left: 65%;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY CONTAINER */
+.overlay-background {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY BACKGROUND */
+.overlay-content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    margin-top: -15.6875rem;
+    left: 50%;
+    margin-left: -25rem;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON */
+#backButton {
+    position: absolute;
+    background-color: #393939;
+    color: white;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON HOVER */
+#backButton:hover {
+    background-color: #1e1e1e;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY TEXT */
+.text-forms {
+    position: absolute;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: 6.25rem;
+    text-align: center;
+    color: white;
+    margin-top: -31.25rem;
+    margin-left: 3.75rem;
+    z-index: 2;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY FORM */
+#commentName {
+    resize: none;
+    border: 0.0625 solid;
+    background-color: #ffffff;
+    color: black;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+    width: 37.5rem;
+    height: 2.5rem;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY CONFIRM BUTTON */
+#confirmButton {
+    resize: none;
+    background-color: #393939;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: xx-large;
+    width: 12.5rem;
+    height: 6.25rem;
+}
+
+/* COMMENT NAME SUBMISSION OVERLAY CONFIRM BUTTON HOVER */
+#confirmButton:hover {
+    background-color: #1e1e1e;
+}
+
+/* COMMENTS INPUT BOX */
+form {
+    text-align: left;
+    padding-left: 6.25rem;
+    font-family: "Quicksand", "Garamond", serif;
+}
+
+/* COMMENT TEXT BOX */
+#commentText {
+    resize: none;
+    border: 0.0625rem solid;
+    border-color: rgb(195, 180, 255);
+    background-color: #393939;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: clamp(24px, 1.5vh, 48px);
+    width: 25rem;
+    height: 5rem;
+}
+
+/* COMMENT SUBMISSION BUTTON */
+#commentButton {
+    margin-left: 19.25rem;
+    resize: none;
+    background-color: #393939;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: large;
+}
+
+/* COMMENT SUBMISSION BUTTON HOVER */
+#commentButton:hover {
+    background-color: #1e1e1e;
+}
+
+/* COMMENTS THAT HAVE BEEN WRITTEN CONTAINER */
+.allComments {
+    text-align: left;
+    padding-left: 6.25rem;
+    width: 40%;
+    color: white;
+    font-family: "Quicksand", "Garamond", serif;
+    font-size: clamp(24px, 1.5vh, 48px);
+}
+
+/* COMMENTS THAT HAVE BEEN WRITTEN NAMES */
+#commentUID {
+    font-size: clamp(24px, 1.5vh, 48px);
+    color: rgb(195, 180, 255);
+}
+
+/* COMMENTS THAT HAVE BEEN WRITTEN DATE */
+#commentDate {
+    font-size: 1.125rem;
+    color: rgb(235, 230, 253);
+}
+
+/* IMPORTED FONTS */
+@font-face {
+    font-family: Quicksand;
+    src: url("Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: Vergilia;
+    src: url("Vergilia.ttf");
+}
