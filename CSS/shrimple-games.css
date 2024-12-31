@@ -5,15 +5,15 @@ body {
 
 /* NAV BAR CONTAINER */
 .TOCContainer {
-    border: 1px solid;
+    border: 0.0625rem solid;
     width: 100%;
-    height: 50px;
+    height: 10vh;
     font-family: "Quicksand", "Garamond", serif;
 }
 
 /* EACH OPTION IN THE NAV BAR TABLE */
 .TOC {
-    border: 1px solid;
+    border: 0.0625rem solid;
     font-family: "Quicksand", "Garamond", serif;
     font-size: large;
     text-align: center;
@@ -25,7 +25,7 @@ body {
     background-color: #393939;
     color: white;
     font-family: "Quicksand", "Garamond", serif;
-    font-size: large;
+    font-size: clamp(0.625rem, 2vw, 2.1875rem);
     width: 100%;
     height: 100%;
 }
@@ -58,14 +58,14 @@ h1 {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 3.75rem;
 }
 
 /* SIDE NAV TEXT STYLE */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.5625rem;
     color: white;
     display: block;
     transition: 0.3s;
@@ -80,54 +80,56 @@ h1 {
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    right: 1.5625rem;
+    font-size: 2.25rem;
+    margin-left: 3.125rem;
 }
 
 /* HEADERS TO EACH LINK SEGMENT */
 .SideBarHeaders {
     color: white;
     font-family: "Vergilia", "Garamond", serif;
-    padding: 8px 8px 8px 32px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
 }
 
 /* EMAIL TEXT IN SIDE NAV */
 .Email {
     color: white;
     font-family: "Vergilia", "Garamond", serif;
-    font-size: 10px;
-    padding: 8px 8px 8px 24px;
+    font-size: 0.625rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
 }
 
 /* COMMENTS HEADER */
 .sections {
     text-align: left;
-    padding-left: 100px;
+    padding-left: 6.25rem;
     color: #53c2ba;
     font-family: "Vergilia", "Garamond", serif;
+    font-size: clamp(32px, 3vh, 64px);
 }
 
 /* MAKE SURE ABOUT ME PICTURE IS ON THE RIGHT */
 #aboutPicture {
     position: absolute;
-    width: 40%;
-    height: 40%;
-    right: 50px;
+    width: clamp(20rem, 40vw, 40rem);
+    height: clamp(12.5rem, 25vw, 25rem);
+    right: 3.125rem;
 }
 
 /* ABOUT ME TEXT AND COMMENTS */
 .SectionText {
     text-align: left;
-    padding-left: 100px;
+    padding-left: 6.25rem;
     width: 40%;
     color: #bff5f1;
+    font-size: clamp(24px, 1.5vh, 48px);
 }
 
 /* SPOTIFY DISPLAY */
 #SpotifyEmbed {
-    padding-left: 100px;
-    margin-right: 50px;
+    padding-left: 6.25rem;
+    margin-right: 3.125rem;
 }
 
 /* LOOKING FOR ARTIST HEADER */
@@ -135,14 +137,16 @@ h1 {
     text-align: center;
     color: #53c2ba;
     font-family: "Times New Roman", "Georgia", serif;
+    font-size: clamp(32px, 3vh, 64px);
 }
 
 /* LOOKING FOR ARTIST TEXT */
 #ArtistSection {
     text-align: center;
-    padding-left: 400px;
-    padding-right: 400px;
+    padding-left: 16rem;
+    padding-right: 16rem;
     color: #bff5f1;
+    font-size: clamp(24px, 1.5vh, 48px);
 }
 
 /* COMMENT NAME SUBMISSION OVERLAY CONTAINER */
@@ -160,10 +164,24 @@ h1 {
     cursor: pointer;
 }
 
+/* COMMENT NAME SUBMISSION OVERLAY BACKGROUND */
+.overlay-content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    margin-top: -15.6875rem;
+    left: 50%;
+    margin-left: -25rem;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
 /* COMMENT NAME SUBMISSION OVERLAY BACK BUTTON */
 #backButton {
-    margin-left: 24%;
-    margin-top: 6%;
+    position: absolute;
     background-color: #393939;
     color: white;
 }
@@ -173,44 +191,28 @@ h1 {
     background-color: #1e1e1e;
 }
 
-/* COMMENT NAME SUBMISSION OVERLAY BACKGROUND */
-.overlay-content {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    margin-top: -251px;
-    left: 50%;
-    margin-left: -400px;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    cursor: pointer;
-}
-
 /* COMMENT NAME SUBMISSION OVERLAY TEXT */
 .text-forms {
+    position: absolute;
     font-family: "Quicksand", "Garamond", serif;
-    font-size: 100px;
+    font-size: 6.25rem;
     text-align: center;
     color: white;
-    width: 50%;
-    margin-top: -500px;
+    margin-top: -31.25rem;
+    margin-left: 3.75rem;
     z-index: 2;
-    margin-left: 2%;
 }
 
 /* COMMENT NAME SUBMISSION OVERLAY FORM */
 #commentName {
     resize: none;
-    border: 1px solid;
-    border-color: #53c2ba;
+    border: 0.0625 solid;
     background-color: #ffffff;
     color: black;
     font-family: "Quicksand", "Garamond", serif;
     font-size: large;
-    width: 600px;
-    height: 40px;
+    width: 37.5rem;
+    height: 2.5rem;
 }
 
 /* COMMENT NAME SUBMISSION OVERLAY CONFIRM BUTTON */
@@ -220,8 +222,8 @@ h1 {
     color: white;
     font-family: "Quicksand", "Garamond", serif;
     font-size: xx-large;
-    width: 200px;
-    height: 100px;
+    width: 12.5rem;
+    height: 6.25rem;
 }
 
 /* COMMENT NAME SUBMISSION OVERLAY CONFIRM BUTTON HOVER */
@@ -232,26 +234,26 @@ h1 {
 /* COMMENTS INPUT BOX */
 form {
     text-align: left;
-    padding-left: 100px;
+    padding-left: 6.25rem;
     font-family: "Quicksand", "Garamond", serif;
 }
 
 /* COMMENT TEXT BOX */
 #commentText {
     resize: none;
-    border: 1px solid;
+    border: 0.0625rem solid;
     border-color: #53c2ba;
     background-color: #393939;
     color: white;
     font-family: "Quicksand", "Garamond", serif;
-    font-size: large;
-    width: 400px;
-    height: 80px;
+    font-size: clamp(24px, 1.5vh, 48px);
+    width: 25rem;
+    height: 5rem;
 }
 
 /* COMMENT SUBMISSION BUTTON */
 #commentButton {
-    margin-left: 22%;
+    margin-left: 19.25rem;
     resize: none;
     background-color: #393939;
     color: white;
@@ -267,29 +269,29 @@ form {
 /* COMMENTS THAT HAVE BEEN WRITTEN CONTAINER */
 .allComments {
     text-align: left;
-    padding-left: 100px;
+    padding-left: 6.25rem;
     width: 40%;
     color: white;
     font-family: "Quicksand", "Garamond", serif;
-    font-size: large;
+    font-size: clamp(24px, 1.5vh, 48px);
 }
 
 /* COMMENTS THAT HAVE BEEN WRITTEN NAMES */
 #commentUID {
-    font-size: x-large;
+    font-size: clamp(24px, 1.5vh, 48px);
     color: #53c2ba;
 }
 
 /* COMMENTS THAT HAVE BEEN WRITTEN DATE */
 #commentDate {
-    font-size: 15px;
+    font-size: 1.125rem;
     color: #bff5f1;
 }
 
 /* SIDE NAV ANIMATION */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+@media screen and (max-height: 28.125rem) {
+    .sidenav {padding-top: 0.9375rem;}
+    .sidenav a {font-size: 1.125rem;}
 }
 
 /* IMPORTED FONTS */
